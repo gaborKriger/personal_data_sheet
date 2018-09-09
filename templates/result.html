@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Data Sheet</title>
+</head>
+<body>
+    {% if full_name %}
+        {% for item in full_name %}
+            {{ item.first_name + " " + item.last_name }} </br>
+        {% endfor %}
+    {% endif %}
+
+    <p><a href="{{ url_for('index') }}">Back to the main menu</a></p>
+
+</body>
+</html>
